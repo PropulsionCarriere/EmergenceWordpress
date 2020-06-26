@@ -39,15 +39,30 @@
 		</li>
 	</ul>
 <?php endif; ?>
+<h3>
+	Tout nos forfaits inclus dans le forfait : Panier Cadeaux d’une valeur de $ 100.00/pers.
+</h3>
 <h1>
-	Nos forfaits
+	
+	<?php 
+	$term = get_term_by('slug', 'nos-forfaits', 'product_cat'); echo "".$term->name; 
+	
+  $attach=get_posts( array( 'post_type' => 'attachment',
+						  '' => 'nos-forfaits' ) );
+	
+	echo wp_get_attachment_image(22,$size);
+	
+	
+	 
+	var_dump($attach);
+	?>
 </h1>
-<ul class="products">
+<ul class="products d-flex justify-content-around">
 	<?php
 		$args = array(
 			'post_type' => 'product',
 			'product_cat' => 'nos-forfaits',
-			'posts_per_page' => 12
+			'posts_per_page' => -1
 			);
 	
 		$loop = new WP_Query( $args );
@@ -68,7 +83,7 @@
 </ul><!--/.products-->
 
 <h1>
-	Produits Morille Québec
+	<?php $term = get_term_by('slug', 'produits-morille-quebec', 'product_cat'); echo "Category name:".$term->name; ?>
 </h1>
 <hr>
 <ul class="products">

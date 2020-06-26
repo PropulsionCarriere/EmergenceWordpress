@@ -16,3 +16,12 @@ how to get the build process up & running.
 If you need to make a quick fix, feel free to add CSS
 below this comment - it will override the bundled styles.
 */
+ul
+{
+	list-style-type: none;
+}
+li {
+    display: inline-block;
+	margin-right:10px;
+
+}
