@@ -3,10 +3,7 @@
  * "The Loop" partial.
  *
  * @package WPEmergeTheme
- */
-
-?>
-<?php if ( have_posts() ) : ?>
+ * <?php if ( have_posts() ) : ?>
 	<div class="articles">
 		<?php while ( have_posts() ) : ?>
 			<?php the_post(); ?>
@@ -39,25 +36,32 @@
 		</li>
 	</ul>
 <?php endif; ?>
+ */
+
+?>
+
+<div  class="mainH mx-auto d-block">
+		<h1>
+	<?php 
+	$term = get_term_by('slug', 'nos-forfaits', 'product_cat'); 
+	echo "".$term->name;?>
+	</h1> 
+
+<?php 
+	$product_categories=get_terms('slug','product_cat',$args);
+	$thumbnail_id=get_term_meta($term->term_id,'thumbnail_id',true);
+	$thumbnail_url=wp_get_attachment_image($thumbnail_id,'mainheader');
+	echo $thumbnail_url;
+	?>
+
+
+</div>
+
+
 <h3>
 	Tout nos forfaits inclus dans le forfait : Panier Cadeaux d’une valeur de $ 100.00/pers.
 </h3>
-<h1>
-	
-	<?php 
-	$term = get_term_by('slug', 'nos-forfaits', 'product_cat'); echo "".$term->name; 
-	
-  $attach=get_posts( array( 'post_type' => 'attachment',
-						  '' => 'nos-forfaits' ) );
-	
-	echo wp_get_attachment_image(22,$size);
-	
-	
-	 
-	var_dump($attach);
-	?>
-</h1>
-<ul class="products d-flex justify-content-around">
+<ul class="products d-flex justify-content-around ">
 	<?php
 		$args = array(
 			'post_type' => 'product',
@@ -81,10 +85,19 @@
 		wp_reset_postdata();
 	?>
 </ul><!--/.products-->
-
+<div class="secondH rounded mx-auto d-block">
 <h1>
-	<?php $term = get_term_by('slug', 'produits-morille-quebec', 'product_cat'); echo "Category name:".$term->name; ?>
+	<?php $term = get_term_by('slug', 'produits-morille-quebec', 'product_cat'); echo "".$term->name; ?>
 </h1>
+	<?php 
+	$product_categories=get_terms('slug','product_cat',$args);
+	$thumbnail_id=get_term_meta($term->term_id,'thumbnail_id',true);
+	$thumbnail_url=wp_get_attachment_image($thumbnail_id,'secondheader');
+	echo $thumbnail_url;
+	?>	
+	
+</div>
+
 <hr>
 <ul class="products">
 	<?php
