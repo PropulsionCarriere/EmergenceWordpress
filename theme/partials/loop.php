@@ -61,7 +61,9 @@
 <h3>
 	Tout nos forfaits inclus dans le forfait : Panier Cadeaux d’une valeur de $ 100.00/pers.
 </h3>
-<ul class="products d-flex justify-content-around ">
+<div>
+	
+<ul class="productsForfaits">
 	<?php
 		$args = array(
 			'post_type' => 'product',
@@ -85,6 +87,7 @@
 		wp_reset_postdata();
 	?>
 </ul><!--/.products-->
+	</div>
 <div class="secondH rounded mx-auto d-block">
 <h1>
 	<?php $term = get_term_by('slug', 'produits-morille-quebec', 'product_cat'); echo "".$term->name; ?>
@@ -99,7 +102,10 @@
 </div>
 
 <hr>
-<ul class="products">
+<div>
+	
+
+<ul class="products ">
 	<?php
 		$args = array(
 			'post_type' => 'product',
@@ -120,5 +126,5 @@
 		wp_reset_postdata();
 	?>
 </ul><!--/.products-->
-
+</div>
 
