@@ -50,7 +50,7 @@
 <?php 
 	$product_categories=get_terms('slug','product_cat',$args);
 	$thumbnail_id=get_term_meta($term->term_id,'thumbnail_id',true);
-	$thumbnail_url=wp_get_attachment_image($thumbnail_id,'mainheader');
+	$thumbnail_url=wp_get_attachment_image($thumbnail_id,'mainheader',false,["class" => "img-fluid"]);
 	echo $thumbnail_url;
 	?>
 
@@ -95,7 +95,7 @@
 	<?php 
 	$product_categories=get_terms('slug','product_cat',$args);
 	$thumbnail_id=get_term_meta($term->term_id,'thumbnail_id',true);
-	$thumbnail_url=wp_get_attachment_image($thumbnail_id,'secondheader');
+	$thumbnail_url=wp_get_attachment_image($thumbnail_id,'secondheader',false,["class" => "img-fluid"]);
 	echo $thumbnail_url;
 	?>	
 	

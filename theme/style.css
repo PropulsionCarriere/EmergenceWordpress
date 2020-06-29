@@ -69,6 +69,7 @@ padding:15px 0 15px 0;
 	list-style: none;
   flex: 0 0 33.333333%;
 	text-align:center;
+	
 
 }
 
@@ -84,7 +85,7 @@ padding:15px 0 15px 0;
   flex: 0 0 50%;
 	text-align:center;
 }
-.product img
+.woocommerce-loop-product__title
 {
-	
+	font-size:23px;
 }
