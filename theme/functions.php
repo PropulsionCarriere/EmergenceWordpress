@@ -121,6 +121,8 @@ add_image_size( "post_image", 2000, 400, ['center', 'center'] );
 add_image_size( "big_thumbnail", 200, 200, true);
 add_image_size("mainheader",1024,600);
 add_image_size("secondheader",1024,400);
+
+
 add_action( 'widgets_init', function(){
 	register_sidebar([
 		'name' 					=> 'footer-left',
