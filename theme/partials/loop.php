@@ -127,3 +127,30 @@
 </ul><!--/.products-->
 </div>
 
+
+<?php
+ 
+$argsPart = array(
+			'post_type' => 'partenaires',
+			'slug' => 'partenaire',
+			'posts_per_page' => 12
+			);
+	
+$partenaire = new WP_Query($argsPart);
+ 
+
+if ( $partenaire->have_posts() ) {
+    echo '<ul>';
+    while ( $partenaire->have_posts() ) {
+        $partenaire->the_post();
+        echo '<li>' . get_the_title() . '</li>';
+		echo '<li>' . get_the_post_thumbnail() . '</li>';
+    }
+    echo '</ul>';
+} else {
+    
+}
+
+wp_reset_postdata();
+
+?>
