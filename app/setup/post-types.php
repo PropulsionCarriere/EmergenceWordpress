@@ -44,18 +44,18 @@ register_post_type( 'app_custom_post_type', array(
 */
 // phpcs:enable
 <?php
-register_post_type( 'app_custom_post_type', array(
+register_post_type( 'partenaires', array(
 	'labels' => array(
-		'name'               => __( 'Custom Types', 'app' ),
-		'singular_name'      => __( 'Custom Type', 'app' ),
-		'add_new'            => __( 'Add New', 'app' ),
-		'add_new_item'       => __( 'Add new Custom Type', 'app' ),
-		'view_item'          => __( 'View Custom Type', 'app' ),
-		'edit_item'          => __( 'Edit Custom Type', 'app' ),
-		'new_item'           => __( 'New Custom Type', 'app' ),
-		'search_items'       => __( 'Search Custom Types', 'app' ),
-		'not_found'          => __( 'No custom types found', 'app' ),
-		'not_found_in_trash' => __( 'No custom types found in trash', 'app' ),
+		'name'               => __( 'Partenaires', 'app' ),
+		'singular_name'      => __( 'Partenaire', 'app' ),
+		'add_new'            => __( 'Ajouter partenaire', 'app' ),
+		'add_new_item'       => __( 'Ajouter partenaire', 'app' ),
+		'view_item'          => __( 'Voir partenaire', 'app' ),
+		'edit_item'          => __( 'Modifier partenaire', 'app' ),
+		'new_item'           => __( 'Nouveau partenaire', 'app' ),
+		'search_items'       => __( 'Chercher partenaire', 'app' ),
+		'not_found'          => __( 'No partenaire trouvé', 'app' ),
+		'not_found_in_trash' => __( 'No partenaire trouvé dans la corbeille', 'app' ),
 	),
 	'public'              => true,
 	'exclude_from_search' => false,
@@ -67,7 +67,7 @@ register_post_type( 'app_custom_post_type', array(
 	'menu_icon'           => 'dashicons-admin-post',
 	'supports'            => array( 'title', 'editor', 'page-attributes' ),
 	'rewrite'             => array(
-		'slug'       => 'custom-post-type',
+		'slug'       => 'partenaire',
 		'with_front' => false,
 	),
 ));
