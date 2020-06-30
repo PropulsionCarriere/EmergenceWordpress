@@ -43,9 +43,9 @@ register_post_type( 'app_custom_post_type', array(
 ));
 */
 // phpcs:enable
-<?php
+
 register_post_type( 'partenaires', array(
-	'labels' => array(
+	'labels' => [
 		'name'               => __( 'Partenaires', 'app' ),
 		'singular_name'      => __( 'Partenaire', 'app' ),
 		'add_new'            => __( 'Ajouter partenaire', 'app' ),
@@ -56,7 +56,7 @@ register_post_type( 'partenaires', array(
 		'search_items'       => __( 'Chercher partenaire', 'app' ),
 		'not_found'          => __( 'No partenaire trouvé', 'app' ),
 		'not_found_in_trash' => __( 'No partenaire trouvé dans la corbeille', 'app' ),
-	),
+	],
 	'public'              => true,
 	'exclude_from_search' => false,
 	'show_ui'             => true,
@@ -65,11 +65,11 @@ register_post_type( 'partenaires', array(
 	'_edit_link'          => 'post.php?post=%d',
 	'query_var'           => true,
 	'menu_icon'           => 'dashicons-admin-post',
-	'supports'            => array( 'title', 'editor', 'page-attributes' ),
-	'rewrite'             => array(
+	'supports'            => ([ 'title', 'thumbnail'  ]),
+	'rewrite'             => ([
 		'slug'       => 'partenaire',
 		'with_front' => false,
-	),
+	]),
 ));
 
 ?>
