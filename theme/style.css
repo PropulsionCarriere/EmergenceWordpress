@@ -35,16 +35,15 @@ padding:15px 0 15px 0;
 
 .mainH img,.secondH img
 {
-
   margin-left: auto;
   margin-right: auto;
-	
-	
+	width:100%;
 }
 .mainH ,.secondH
 {position: relative;
   text-align: center;
   color: white;
+
 	
 	
 }
@@ -57,22 +56,29 @@ padding:15px 0 15px 0;
 	border:solid white;
 	padding:60px;
 }
- .products
-{
-	  display: flex;
-  flex-wrap: wrap;
-  padding-left: 0;
+.products
+{	display:grid;
+	grid-template-columns: 100px 50px 100px;
+	grid-template-rows:  auto ; 
+  column-gap:270px;
+  row-gap: 50px;
+	padding-top:50px;
 	
 }
- .products li
+.products img
 {
-	list-style: none;
-  flex: 0 0 33.333333%;
+	width:200px;
+	height:200px;
+}
+.products h2
+{
+	font-size:20px;
+	
+}
+.products li{
+	width:200px;
 	text-align:center;
-	
-
 }
-
 .productsForfaits
 {
 	display: flex;
