@@ -50,8 +50,8 @@
 <?php 
 	$product_categories=get_terms('slug','product_cat',$args);
 	$thumbnail_id=get_term_meta($term->term_id,'thumbnail_id',true);
-	$thumbnail_url=wp_get_attachment_image($thumbnail_id,'mainheader',false,["class" => "img-fluid"]);
-	echo $thumbnail_url;
+	$thumbnail_result=wp_get_attachment_image($thumbnail_id,'mainheader',false,["class" => "img-fluid"]);
+	echo $thumbnail_result;
 	?>
 
 
@@ -95,8 +95,8 @@
 	<?php 
 	$product_categories=get_terms('slug','product_cat',$args);
 	$thumbnail_id=get_term_meta($term->term_id,'thumbnail_id',true);
-	$thumbnail_url=wp_get_attachment_image($thumbnail_id,'secondheader',false,["class" => "img-fluid"]);
-	echo $thumbnail_url;
+	$thumbnail_result=wp_get_attachment_image($thumbnail_id,'secondheader',false,["class" => "img-fluid"]);
+	echo $thumbnail_result;
 	?>	
 	
 </div>
@@ -139,14 +139,16 @@ $argsPart = array(
 $partenaire = new WP_Query($argsPart);
  
 
-if ( $partenaire->have_posts() ) {
+if ( $partenaire->have_posts() ) 
+{
     echo '<div class="table"><ul id="horizontal-part">';
-    while ( $partenaire->have_posts() ) {
+	while ( $partenaire->have_posts() ) 
+	{
         $partenaire->the_post();
         
 		echo '<li>' . get_the_post_thumbnail() . '</li>';
     }
-    echo '</ul></div>';
+    	echo '</ul></div>';
 } else {
     
 }
