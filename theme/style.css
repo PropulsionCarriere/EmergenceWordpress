@@ -101,15 +101,16 @@ padding:15px 0 15px 0;
 	text-align:center;
 	
 }
+.wp-post-image
+{
+	max-width:200px;
+	
+}
 .woocommerce-loop-product__title
 {
 	font-size:23px;
 }
-.wp-post-image
-{
-	max-width:200px;
-	max-height:100px;
-}
+
 .table {
 	display: table;   
 	margin: 0 auto;
