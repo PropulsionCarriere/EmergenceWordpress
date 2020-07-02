@@ -140,13 +140,13 @@ $partenaire = new WP_Query($argsPart);
  
 
 if ( $partenaire->have_posts() ) {
-    echo '<ul>';
+    echo '<div class="table"><ul id="horizontal-part">';
     while ( $partenaire->have_posts() ) {
         $partenaire->the_post();
         
 		echo '<li>' . get_the_post_thumbnail() . '</li>';
     }
-    echo '</ul>';
+    echo '</ul></div>';
 } else {
     
 }
