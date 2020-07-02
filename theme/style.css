@@ -33,19 +33,28 @@ font-size:23px;
 padding:15px 0 15px 0;
 }
 
-.mainH img,.secondH img
+.mainH img,
 {
   margin-left: auto;
   margin-right: auto;
+	padding:0;
+	
+	
+}
+
+.secondH img
+{
 	width:100%;
+	height:300px;
+ object-fit:cover;
+	
 }
 .mainH ,.secondH
 {position: relative;
   text-align: center;
   color: white;
+	
 
-	
-	
 }
 .mainH h1 ,.secondH h1
 {
@@ -90,8 +99,14 @@ padding:15px 0 15px 0;
 		list-style: none;
   flex: 0 0 50%;
 	text-align:center;
+	
 }
 .woocommerce-loop-product__title
 {
 	font-size:23px;
+}
+.wp-post-image
+{
+	max-width:200px;
+	max-height:100px;
 }
