@@ -88,7 +88,7 @@
 	?>
 </ul><!--/.products-->
 	</div>
-<div class="secondH rounded mx-auto d-block">
+<div class="secondH ">
 <h1>
 	<?php $term = get_term_by('slug', 'produits-morille-quebec', 'product_cat'); echo "".$term->name; ?>
 </h1>
@@ -143,7 +143,7 @@ if ( $partenaire->have_posts() ) {
     echo '<ul>';
     while ( $partenaire->have_posts() ) {
         $partenaire->the_post();
-        echo '<li>' . get_the_title() . '</li>';
+        
 		echo '<li>' . get_the_post_thumbnail() . '</li>';
     }
     echo '</ul>';
