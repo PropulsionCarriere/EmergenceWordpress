@@ -46,6 +46,8 @@ padding:15px 0 15px 0;
   margin-left: auto;
   margin-right: auto;
 	padding:0;
+	width:100%;
+	
 	
 	
 }
@@ -87,6 +89,7 @@ max-width: 1200px;
   display: grid;
   grid-gap: 2rem;
 padding: 0px;
+	text-align:center;
 }
 .productsMorille img
 {
@@ -105,20 +108,26 @@ padding: 0px;
 	 background-color: dodgerblue;
   color: white;
   padding: 1rem;
-
 	
 }
 .productsForfaits
 {
 	display: flex;
-  flex-wrap: wrap;
-  padding-left: 0;
+  	flex-wrap: wrap;
+  	padding-left: 0;
+	
+}
+.productsForfaits h2
+{position: relative;
+  bottom:10%;
+
 }
 .productsForfaits li
 {
 	list-style: none;
   	flex: 0 0 50%;
 	text-align:center;
+	position:relative;
 	
 }
 
