@@ -3,7 +3,9 @@
  * "The Loop" partial.
  *
  * @package WPEmergeTheme
- * <?php if ( have_posts() ) : ?>
+ *
+ */
+ <?php if ( have_posts() ) : ?>
 	<div class="articles">
 		<?php while ( have_posts() ) : ?>
 			<?php the_post(); ?>
@@ -36,8 +38,6 @@
 		</li>
 	</ul>
 <?php endif; ?>
- */
-
 ?>
 
 
