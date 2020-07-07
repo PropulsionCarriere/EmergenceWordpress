@@ -18,7 +18,8 @@ below this comment - it will override the bundled styles.
 */
 #content-wrapper
 {
-	margin-top:100px;
+	max-width:100%;
+	
 }
 
 ul
@@ -40,12 +41,10 @@ padding:15px 0 15px 0;
 
 .mainH img
 {
-  margin-left: auto;
-  margin-right: auto;
-	padding:0;
+	width:100%;
 	
+	object-fit:cover;
 }
-
 .secondH img
 {
 	width:100%;
@@ -58,6 +57,7 @@ padding:15px 0 15px 0;
   text-align: center;
   color: white;
 }
+
 .mainH h1 ,.secondH h1
 {
 	position: absolute;
@@ -76,11 +76,11 @@ padding:15px 0 15px 0;
 }
 .productsMorille
 {
-max-width: 1200px;
+
   margin: 30px auto;
   display: grid;
   grid-gap: 2rem;
-padding: 0px;
+padding: 0 50px 0 50px;
 text-align:center;	
 }
 
@@ -96,14 +96,24 @@ text-align:center;
 .productsMorille h2
 {
 	font-size:18px;
+	margin-top:10px;
+	padding:0 20px 0 20px;
 	
 }
 .productsMorille li{
 	 
   color: white;
   padding: 1rem;
+
+	
 	
 }
+.productsMorille li a{
+	 
+  
+	
+}
+
 .productsForfaits
 {
 	display: flex;
@@ -112,22 +122,22 @@ text-align:center;
 	align-items: center;
   justify-content: center;
 	
+	
 }
 
-.productsForfaits h2
-{position: relative;
-  bottom:10%;
-	color:white;
-}
 
 .productsForfaits li
 {
 	list-style: none;
   	flex: 0 0 50%;
 	text-align:center;
+
 	
 }
+.productsMorille li a
+{
 
+}
 .woocommerce-loop-product__title
 {
 	font-size:23px;
@@ -139,6 +149,7 @@ text-align:center;
 	background-color:lightgrey;
 	padding:20px;
 	width:100%;
+	text-align:center;
 }
 
 ul#horizontal-part {
@@ -156,4 +167,4 @@ ul#horizontal-part {
 	max-height:100px;
 }
 
-  
+ 
