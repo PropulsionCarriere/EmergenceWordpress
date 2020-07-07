@@ -33,7 +33,7 @@ if(is_front_page())
 	<h3>
 		Tout nos forfaits inclus dans le forfait : Panier Cadeaux d’une valeur de $ 100.00/pers.
 	</h3>
-	<div>
+	<div class="boxproductsForfaits">
 		<ul class="productsForfaits">
 		<?php
 			$args = array(
@@ -73,7 +73,9 @@ if(is_front_page())
 
 	</div>
 
-	<div>
+	<div class='boxproductsMorille'>
+		
+
 		<ul class="productsMorille ">
 		<?php
 			$args = array(
@@ -95,9 +97,9 @@ if(is_front_page())
 			wp_reset_postdata();
 		?>
 		</ul><!--/.products-->
-	</div>
-
 	
+</div>
+
 	<?php
  
 		$argsPart = array(
@@ -111,7 +113,7 @@ if(is_front_page())
 
 		if ( $partenaire->have_posts() ) 
 		{
-			echo '<div class="tablepartenaire"><ul id="horizontal-part">';
+			echo '<div class="tablepartenaire"><h2>En partenariat avec:</h2><ul id="horizontal-part">';
 			while ( $partenaire->have_posts() ) 
 			{
 				$partenaire->the_post();
