@@ -16,11 +16,40 @@ how to get the build process up & running.
 If you need to make a quick fix, feel free to add CSS
 below this comment - it will override the bundled styles.
 */
+@media (min-width: 300px) {
+ 
+
+.mainH h1 {border:solid blue !important; padding:60px!important;}
+
+}
+@media (min-width: 600px) {
+ 
+.productsMorille { grid-template-columns: repeat(2, 1fr);}
+.productsForfaits{padding:0;}
+}
+@media (min-width: 900px) {
+  .productsMorille { grid-template-columns: repeat(3, 1fr); }
+	.mainH h1{border:solid white; padding:60px!important;}
+}
 #content-wrapper
 {
 	max-width:100%;
+	margin-right:auto;
+	margin-left:auto;
 	
 }
+.col
+{
+	padding:0;
+}
+
+.content-area
+{
+
+	margin-top:30px;
+	padding:30px;
+}
+
 
 ul
 {
@@ -36,7 +65,8 @@ h3
 {
 color:#00A0DF;
 font-size:23px;
-padding:15px 0 15px 0;
+padding:15px 10px 15px 10px;
+	margin:0;
 }
 
 .mainH img
@@ -64,16 +94,20 @@ padding:15px 0 15px 0;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+	
+	
+}
+.mainH h1 
+{
+	border:solid red!important;
+	padding:60px!important;
+}
+secondH h1
+{
 	border:solid white;
-	padding:60px;
+	padding:50px;
 }
-@media (min-width: 600px) {
- 
-.productsMorille { grid-template-columns: repeat(2, 1fr); }
-}
-@media (min-width: 900px) {
-  .productsMorille { grid-template-columns: repeat(3, 1fr); }
-}
+
 .productsMorille
 {
 
@@ -86,8 +120,8 @@ text-align:center;
 
 .productsMorille img
 {
-	width:180px;
-	height:180px;
+	width:190px;
+	height:190px;
 	display: block;
   margin-left: auto;
   margin-right: auto;
@@ -105,39 +139,28 @@ text-align:center;
   color: white;
   padding: 1rem;
 
-	
-	
-}
-.productsMorille li a{
-	 
-  
-	
 }
 
 .productsForfaits
 {
 	display: flex;
   	flex-wrap: wrap;
-  	padding-left: 0;
 	align-items: center;
-  justify-content: center;
 	
-	
+ 		
 }
-
 
 .productsForfaits li
 {
+	
 	list-style: none;
   	flex: 0 0 50%;
 	text-align:center;
 
-	
 }
-.productsMorille li a
-{
 
-}
+
+
 .woocommerce-loop-product__title
 {
 	font-size:23px;
@@ -162,9 +185,15 @@ ul#horizontal-part {
 		margin:30px;
 	}
 .tablepartenaire img
-{
-	max-width:200px;
-	max-height:100px;
-}
+{width:240px;
+	height:130px!important;
+	padding:20px 30px 0 30px;
+	
 
+}
+.wp-post-image
+{
+	height:600px !important;
+	object-fit:cover;
+}
  
