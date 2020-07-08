@@ -33,7 +33,7 @@ if(is_front_page())
 	<h3>
 		Tout nos forfaits inclus dans le forfait : Panier Cadeaux d’une valeur de $ 100.00/pers.
 	</h3>
-	<div class="boxproductsForfaits">
+
 		<ul class="productsForfaits">
 		<?php
 			$args = array(
@@ -46,9 +46,10 @@ if(is_front_page())
 			if ( $loop->have_posts() ) {
 
 				while ( $loop->have_posts() ) : $loop->the_post();
-
-					wc_get_template_part( 'content', 'product' );
-
+	
+						wc_get_template_part( 'content', 'product' );
+		
+	
 				endwhile;
 			} else {
 				echo __( 'No products found' );
@@ -56,7 +57,6 @@ if(is_front_page())
 			wp_reset_postdata();
 		?>
 		</ul><!--/.products-->
-	</div>
 
 
 	<div class="secondH ">
@@ -73,7 +73,7 @@ if(is_front_page())
 
 	</div>
 
-	<div class='boxproductsMorille'>
+	<div>
 		
 
 		<ul class="productsMorille ">
@@ -88,8 +88,15 @@ if(is_front_page())
 			if ( $loop->have_posts() ) {
 
 				while ( $loop->have_posts() ) : $loop->the_post();
-					wc_get_template_part( 'content', 'product' );
-
+					?>
+					<div class='card'>
+		<div class="card-body">
+				<?php		
+						wc_get_template_part( 'content', 'product' );
+			?>
+	</div>
+</div>
+<?php
 				endwhile;
 			} else {
 				echo __( 'No products found' );
