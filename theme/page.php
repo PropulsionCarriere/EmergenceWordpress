@@ -78,6 +78,7 @@ if(is_front_page())
 
 		<ul class="productsMorille">
 		<?php
+	$compteur=0;
 			$args = array(
 				'post_type' => 'product',
 				'product_cat' => 'produits-morille-quebec',
@@ -86,7 +87,7 @@ if(is_front_page())
 
 			$loop = new WP_Query( $args );
 			if ( $loop->have_posts() ) {
-
+			
 				while ( $loop->have_posts() ) : $loop->the_post();
 					?>
 					<div class='card'>
