@@ -76,7 +76,7 @@ if(is_front_page())
 	<div>
 		
 
-		<ul class="productsMorille ">
+		<ul class="productsMorille">
 		<?php
 			$args = array(
 				'post_type' => 'product',
