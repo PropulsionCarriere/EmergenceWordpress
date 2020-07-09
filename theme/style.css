@@ -16,21 +16,28 @@ how to get the build process up & running.
 If you need to make a quick fix, feel free to add CSS
 below this comment - it will override the bundled styles.
 */
-@media (min-width: 300px) {
- 
+  @media (min-width: 300px) {
 
-.mainH h1 {border:solid blue !important; padding:60px!important;}
+.mainH h1 {border:solid white;padding:10px; }
+.secondH h1{border:solid white;padding:10px;}
+
 
 }
 @media (min-width: 600px) {
  
 .productsMorille { grid-template-columns: repeat(2, 1fr);}
-.productsForfaits{padding:0;}
+
+	.mainH h1 {border:solid white;padding:50px; }
+	.secondH h1{border:solid white;}
+	
 }
 @media (min-width: 900px) {
   .productsMorille { grid-template-columns: repeat(3, 1fr); }
-	.mainH h1{border:solid white; padding:60px!important;}
+	.mainH h1{border:solid white;padding:100px;}
+	.secondH h1{border:solid white;padding:50px;}
+	
 }
+
 #content-wrapper
 {
 	max-width:100%;
@@ -38,10 +45,7 @@ below this comment - it will override the bundled styles.
 	margin-left:auto;
 	
 }
-.col
-{
-	padding:0;
-}
+
 
 .content-area
 {
@@ -97,16 +101,7 @@ padding:15px 10px 15px 10px;
 	
 	
 }
-.mainH h1 
-{
-	border:solid red!important;
-	padding:60px!important;
-}
-secondH h1
-{
-	border:solid white;
-	padding:50px;
-}
+
 
 .productsMorille
 {
@@ -120,11 +115,8 @@ text-align:center;
 
 .productsMorille img
 {
-	width:190px;
-	height:190px;
-	display: block;
-  margin-left: auto;
-  margin-right: auto;
+	max-width:190px;
+	
 	
 }
 .productsMorille h2
@@ -146,19 +138,29 @@ text-align:center;
 	display: flex;
   	flex-wrap: wrap;
 	align-items: center;
-	
+	padding:0;
  		
 }
 
 .productsForfaits li
 {
-	
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
 	list-style: none;
   	flex: 0 0 50%;
 	text-align:center;
+	
+	
 
 }
-
+.productsForfaits li img
+{
+	width:100%;
+	height:auto;
+	min-width:200px;
+	max-width:300px;
+}
 
 
 .woocommerce-loop-product__title
@@ -170,7 +172,7 @@ text-align:center;
 	display: table;   
 	margin: 0 auto;
 	background-color:lightgrey;
-	padding:20px;
+	
 	width:100%;
 	text-align:center;
 }
@@ -196,4 +198,7 @@ ul#horizontal-part {
 	height:600px !important;
 	object-fit:cover;
 }
- 
+
+.productsMorille .attachment-woocommerce_thumbnail
+{width:100%;
+height:auto;}
