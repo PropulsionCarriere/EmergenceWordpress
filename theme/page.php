@@ -28,12 +28,10 @@ if(is_front_page())
 		echo $thumbnail_result;
 	?>
 	</div>
-
-
 	<h3>
 		Tout nos forfaits inclus dans le forfait : Panier Cadeaux d’une valeur de $ 100.00/pers.
 	</h3>
-
+<div>
 		<ul class="productsForfaits">
 		<?php
 			$args = array(
@@ -46,7 +44,7 @@ if(is_front_page())
 			if ( $loop->have_posts() ) {
 
 				while ( $loop->have_posts() ) : $loop->the_post();
-	
+					
 						wc_get_template_part( 'content', 'product' );
 		
 	
@@ -56,7 +54,8 @@ if(is_front_page())
 			}
 			wp_reset_postdata();
 		?>
-		</ul><!--/.products-->
+		</ul>
+</div><!--/.products-->
 
 
 	<div class="secondH ">
@@ -75,10 +74,8 @@ if(is_front_page())
 
 	<div>
 		
-
-		<ul class="productsMorille">
 		<?php
-	$compteur=0;
+	
 			$args = array(
 				'post_type' => 'product',
 				'product_cat' => 'produits-morille-quebec',
@@ -86,27 +83,54 @@ if(is_front_page())
 				);
 
 			$loop = new WP_Query( $args );
-			if ( $loop->have_posts() ) {
-			
-				while ( $loop->have_posts() ) : $loop->the_post();
+	$num = $loop->post_count;
+	var_dump($num);
+				if ($num >2){
+					echo'<ul class="productsMorille">';
+					echo'Tu es dans la première partie';
+					if( $loop->have_posts() )
+					{
+						
+						while ( $loop->have_posts() ) : $loop->the_post();
 					?>
-					<div class='card'>
-		<div class="card-body">
-				<?php		
-						wc_get_template_part( 'content', 'product' );
-			?>
-	</div>
-</div>
-<?php
-				endwhile;
-			} else {
+			 			<div class='card'>
+                        	<div class="card-body">
+								<?php wc_get_template_part( 'content', 'product' );?>
+		
+	   						</div>
+                        </div>
+					
+				<?php endwhile;
+						
+					}echo"</ul>";}
+		
+					else if($num<=2)
+					{
+						echo'<ul class="productsMorille2columns">';
+						echo'Tu es dans la seconde partie';
+						while ( $loop->have_posts() ) : $loop->the_post();
+					?>
+			 			<div class='card'>
+                        	<div class="card-body">
+								<?php wc_get_template_part( 'content', 'product' );?>
+		
+	   						</div>
+                        </div>
+					
+					<?php endwhile;
+						
+					echo"</ul>";}
+				
+			 else {
 				echo __( 'No products found' );
 			}
 			wp_reset_postdata();
 		?>
-		</ul><!--/.products-->
-	
-</div>
+		
+</div><!--/.products-->
+		
+				
+
 
 	<?php
  
@@ -147,6 +171,7 @@ else
 			?>
 		</div>
 	</div>
+<hr>
 <?php endwhile; }?>
 
 
