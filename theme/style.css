@@ -16,6 +16,12 @@ how to get the build process up & running.
 If you need to make a quick fix, feel free to add CSS
 below this comment - it will override the bundled styles.
 */
+@font-face
+{
+font-family:Poppin;
+	src:url(../dist/fonts/Poppins/Poppins-Regular.ttf);
+}
+
   @media (min-width: 300px) {
 
 .mainH h1 {border:solid white;padding:10px; }
@@ -33,6 +39,7 @@ below this comment - it will override the bundled styles.
 }
 @media (min-width: 900px) {
   .productsMorille { grid-template-columns: repeat(3, 1fr); }
+	.productsMorille2columns { grid-template-columns: repeat(2, 1fr); }
 	.mainH h1{border:solid white;padding:100px;}
 	.secondH h1{border:solid white;padding:50px;}
 	
@@ -49,15 +56,19 @@ below this comment - it will override the bundled styles.
 
 .content-area
 {
-
-	margin-top:30px;
-	padding:30px;
+margin-top:30px;
+padding:30px;
 }
 
 
 ul
 {
-	list-style-type: none;
+list-style-type: none;
+}
+
+h1,h2
+{
+	font-family:Poppin;
 }
 
 h1,h3
@@ -76,9 +87,9 @@ padding:15px 10px 15px 10px;
 .mainH img
 {
 	width:100%;
-	
 	object-fit:cover;
 }
+
 .secondH img
 {
 	width:100%;
@@ -86,6 +97,7 @@ padding:15px 10px 15px 10px;
  object-fit:cover;
 	
 }
+
 .mainH ,.secondH
 {position: relative;
   text-align: center;
@@ -109,8 +121,8 @@ padding:15px 10px 15px 10px;
   margin: 30px auto;
   display: grid;
   grid-gap: 2rem;
-padding: 0 50px 0 50px;
-text-align:center;	
+	padding: 0 50px 0 50px;
+	text-align:center;	
 }
 
 .productsMorille img
@@ -129,8 +141,7 @@ text-align:center;
 .productsMorille li{
 	 
   color: white;
-  
-
+ 
 }
 
 .productsForfaits
@@ -175,6 +186,10 @@ text-align:center;
 	width:100%;
 	text-align:center;
 }
+.tablepartenaire h2 
+{
+	font-size:30px;
+}
 
 ul#horizontal-part {
 	width: auto;
@@ -185,12 +200,13 @@ ul#horizontal-part {
 		margin:30px;
 	}
 .tablepartenaire img
-{	width:250px;
-	height:130px!important;
+{
+		max-width:290px;
+	max-height:145px!important;
 	padding:20px 30px 0 30px;
-	
 
 }
+
 .wp-post-image
 {
 	height:600px !important;
