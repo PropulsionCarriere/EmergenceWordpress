@@ -1,0 +1,30 @@
+
+
+
+.productsForfaits
+{
+	display: flex;
+  	flex-wrap: wrap;
+	align-items: center;
+	padding:0;
+ 		
+}
+
+.productsForfaits li
+{
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+	list-style: none;
+  	flex: 0 0 50%;
+	text-align:center;
+	
+}
+.productsForfaits li img
+{
+	width:100%;
+	height:auto;
+	min-width:200px;
+	max-width:300px;
+	padding:5px;
+}
