@@ -84,21 +84,21 @@ if(is_front_page())
 
 			$loop = new WP_Query( $args );
 	$num = $loop->post_count;
-	var_dump($num);
+
 				if ($num >2){
 					echo'<ul class="productsMorille">';
-					echo'Tu es dans la première partie';
+					
 					if( $loop->have_posts() )
 					{
 						
 						while ( $loop->have_posts() ) : $loop->the_post();
 					?>
-			 			<div class='card'>
-                        	<div class="card-body">
+			 			
+							
+		
 								<?php wc_get_template_part( 'content', 'product' );?>
 		
-	   						</div>
-                        </div>
+	   						
 					
 				<?php endwhile;
 						
@@ -107,15 +107,11 @@ if(is_front_page())
 					else if($num<=2)
 					{
 						echo'<ul class="productsMorille2columns">';
-						echo'Tu es dans la seconde partie';
+						
 						while ( $loop->have_posts() ) : $loop->the_post();
 					?>
-			 			<div class='card'>
-                        	<div class="card-body">
+			 			
 								<?php wc_get_template_part( 'content', 'product' );?>
-		
-	   						</div>
-                        </div>
 					
 					<?php endwhile;
 						
@@ -173,5 +169,6 @@ else
 	</div>
 <hr>
 <?php endwhile; }?>
+
 
 
