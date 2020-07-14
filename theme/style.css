@@ -53,11 +53,10 @@ font-family:Poppin;
 	
 }
 
-
 .content-area
 {
-margin-top:30px;
-padding:30px;
+	margin-top:30px;
+	padding:30px;
 }
 
 
@@ -114,65 +113,6 @@ padding:15px 10px 15px 10px;
 	
 }
 
-
-.productsMorille
-{
-
-  margin: 30px auto;
-  display: grid;
-  grid-gap: 2rem;
-	padding: 0 50px 0 50px;
-	text-align:center;	
-}
-
-.productsMorille img
-{
-	max-width:190px;
-	
-	
-}
-.productsMorille h2
-{
-	font-size:18px;
-	margin-top:10px;
-	padding:0 20px 0 20px;
-	
-}
-.productsMorille li{
-	 
-  color: white;
- 
-}
-
-.productsForfaits
-{
-	display: flex;
-  	flex-wrap: wrap;
-	align-items: center;
-	padding:0;
- 		
-}
-
-.productsForfaits li
-{
-	display: block;
-  margin-left: auto;
-  margin-right: auto;
-	list-style: none;
-  	flex: 0 0 50%;
-	text-align:center;
-	
-}
-.productsForfaits li img
-{
-	width:100%;
-	height:auto;
-	min-width:200px;
-	max-width:300px;
-	padding:5px;
-}
-
-
 .woocommerce-loop-product__title
 {
 	font-size:23px;
@@ -213,6 +153,4 @@ ul#horizontal-part {
 	object-fit:cover;
 }
 
-.productsMorille .attachment-woocommerce_thumbnail
-{width:100%;
-height:auto;}
+
