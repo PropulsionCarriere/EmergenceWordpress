@@ -7,17 +7,19 @@
   	flex-wrap: wrap;
 	align-items: center;
 	padding:0;
+
  		
 }
+
 
 .productsForfaits li
 {
 	display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin:10px auto 10px auto;
 	list-style: none;
   	flex: 0 0 50%;
 	text-align:center;
+	
 	
 }
 .productsForfaits li img
@@ -27,4 +29,16 @@
 	min-width:200px;
 	max-width:300px;
 	padding:5px;
+}
+
+.productsForfaits .button
+{
+	background-color: #a46497;
+color: #fff;
+padding: .618em 1em;
+border-radius:3px;
+display:block !important;
+margin:auto;
+width:200px;
+
 }
