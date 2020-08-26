@@ -1,7 +1,8 @@
 
+
 .productsMorille,.productsMorille2columns
 {
-	display: flex;
+	display: grid;
   	flex-wrap: wrap;
 	align-items: center;
 	padding:0;
@@ -16,21 +17,19 @@
   	flex: 0 0 50%;
 	text-align:center;
 	
+	padding:20px;
+	
+	
 	
 }
 
-.productsMorille li
-{
-	width:300px; 
-  text-align:center;
-  margin:20px auto 20px auto;
-}
+
 
 .productsMorille h2 ,.productsMorille2columns h2
 {
 	font-size:18px;
 	margin-top:10px;
-	padding:0 50px 0 50px;
+	
 	text-align:center;
 }
 
@@ -38,9 +37,10 @@
 {
 	width:100%;
 	height:auto;
-	min-width:200px;
-	max-width:300px;
-	padding:5px;
+	min-width:50px;
+	max-width:200px;
+	
+	
 	
 }
 .productsMorille li img
@@ -49,14 +49,14 @@
 	height:auto;
 	min-width:50px;
 	max-width:200px;
-	padding:5px;
+	
 
 }
 
 .productsMorille .button,.productsMorille2columns .button
 {
 	
-	background-color: #a46497;
+	background-color: #00A0DF;
 	color: #fff;
 	padding: .618em 1em;
 	border-radius:3px;

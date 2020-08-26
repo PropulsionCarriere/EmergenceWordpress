@@ -11,28 +11,28 @@ nav.admin-bar-showing.fixed-top {
 }
 
 
-#nav {
-  .logo {
-    width: 150px;
-  }
-  &.at-top{
-    @extend .navbar-dark;
+// #nav {
+//   .logo {
+//     width: 150px;
+//   }
+//   &.at-top{
+//     @extend .navbar-dark;
 
-    .logo-dark {
-      opacity: 1;
+//     .logo-dark {
+//       opacity: 1;
 
-    }
-    .logo-light {
-      opacity: 0;
-    }
+//     }
+//     .logo-light {
+//       opacity: 0;
+//     }
 
-  }
+//   }
 
-  &.not-at-top {
-    @extend .navbar-light;
-    @extend .bg-light;
-  }
-}
+//   &.not-at-top {
+//     @extend .navbar-light;
+//     @extend .bg-light;
+//   }
+// }
 .logo-light {
   opacity: 1;
 }

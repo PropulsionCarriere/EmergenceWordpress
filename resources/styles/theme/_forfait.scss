@@ -14,11 +14,16 @@
 
 .productsForfaits li
 {
+	max-width: 400px;
 	display: block;
   margin:10px auto 10px auto;
 	list-style: none;
   	flex: 0 0 50%;
 	text-align:center;
+
+	padding:20px;
+	
+	
 	
 	
 }
@@ -30,10 +35,18 @@
 	max-width:300px;
 	padding:5px;
 }
+.productsForfaits li img:hover
+{
+	opacity: .5;
+    transition: opacity .5s ease-out;
+    -moz-transition: opacity .5s ease-out;
+    -webkit-transition: opacity .5s ease-out;
+    -o-transition: opacity .5s ease-out;
+}
 
 .productsForfaits .button
 {
-	background-color: #a46497;
+	background-color: #00A0DF;
 color: #fff;
 padding: .618em 1em;
 border-radius:3px;
