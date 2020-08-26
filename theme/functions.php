@@ -153,6 +153,8 @@ add_action( 'widgets_init', function(){
 	]);
 } );add_filter( 'woocommerce_add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment' );
 
+
+
 function woocommerce_header_add_to_cart_fragment( $fragments ) {
 	global $woocommerce;
 

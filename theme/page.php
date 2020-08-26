@@ -10,6 +10,7 @@
  */
 
 ?>
+
 <?php
 if(is_front_page())
 {?>
@@ -29,7 +30,7 @@ if(is_front_page())
 	?>
 	</div>
 	<h3>
-		Tout nos forfaits inclus dans le forfait : Panier Cadeaux d’une valeur de $ 100.00/pers.
+		Tout nos forfaits inclus dans le forfait : Panier Cadeaux d’une valeur de  100.00$/pers.
 	</h3>
 <div>
 	
@@ -169,7 +170,9 @@ else
 		</div>
 	</div>
 <hr>
+
 <?php endwhile; }?>
+
 
 
 

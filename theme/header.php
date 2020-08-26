@@ -16,14 +16,21 @@
 
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<script>
 
+  $("a").click(function(){
+    alert("The paragraph was clicked.");
+  });
+
+</script>
 		<?php wp_head(); ?>
+		
 	</head>
 	<body <?php body_class(); ?>>
 		<?php app_shim_wp_body_open(); ?>
 		<nav id="nav" class="fixed-top navbar navbar-expand-md at-top<?=is_admin_bar_showing()?" admin-bar-showing":"" ?>" role="navigation">
 		  <div class="container">
-				<a class="navbar-brand" href="/">
+				<a class="navbar-brand" href="<?php echo get_home_url(); ?>">
 					<img src="<?=carbon_get_theme_option('dark_logo')?>" alt="Logo sombre <?=bloginfo('name')?>" class="logo logo-dark">
 					<img src="<?=carbon_get_theme_option('light_logo')?>" alt="Logo <?=bloginfo('name')?>" class="logo logo-light">
 				</a>
@@ -43,5 +50,7 @@
 						'walker'            => new WP_Bootstrap_Navwalker(),
 					) );
 					?>
+				
 			</div>
 		</nav>
+		
