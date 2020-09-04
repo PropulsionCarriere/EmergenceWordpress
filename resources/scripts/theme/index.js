@@ -7,3 +7,4 @@ import 'airbnb-browser-shims';
 
 // Your code goes here ...
 import './navbar.js';
+import './script.js';
