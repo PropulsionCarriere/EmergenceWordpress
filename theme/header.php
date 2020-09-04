@@ -5,6 +5,9 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package WPEmergeTheme
+ *<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-items-container" aria-controls="navbar-items-container" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
  */
 
 ?>
@@ -16,13 +19,6 @@
 
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<script>
-
-  $("a").click(function(){
-    alert("The paragraph was clicked.");
-  });
-
-</script>
 		<?php wp_head(); ?>
 		
 	</head>
@@ -34,10 +30,7 @@
 					<img src="<?=carbon_get_theme_option('dark_logo')?>" alt="Logo sombre <?=bloginfo('name')?>" class="logo logo-dark">
 					<img src="<?=carbon_get_theme_option('light_logo')?>" alt="Logo <?=bloginfo('name')?>" class="logo logo-light">
 				</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-items-container" aria-controls="navbar-items-container" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-
+				
 					<?php
 					wp_nav_menu( array(
 						'theme_location'    => 'main-menu',
@@ -50,7 +43,11 @@
 						'walker'            => new WP_Bootstrap_Navwalker(),
 					) );
 					?>
-				
+				<a class="cart-customlocation" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php echo sprintf ( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?> </a>
+			
 			</div>
+
 		</nav>
 		
+
+		<div id="popUp"style="display: none; "> Votre article a été ajouté </div>

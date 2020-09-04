@@ -32,6 +32,7 @@ if(is_front_page())
 	<h3>
 		Tout nos forfaits inclus dans le forfait : Panier Cadeaux d’une valeur de  100.00$/pers.
 	</h3>
+
 <div>
 	
 		<ul class="productsForfaits">

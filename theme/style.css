@@ -26,7 +26,12 @@ font-family:Poppin;
 	.mainH h1 {border:solid white;padding:10px; }
 	.secondH h1{border:solid white;padding:10px;}
 	.mainH
-	{margin-top:72px;}
+	{margin-top:73px;
+	}
+	.mainH img
+	{
+	height:auto;
+	}
 	.productsMorille li
 	{	min-width: 240px;
 		max-width: 240px;
@@ -52,8 +57,6 @@ font-family:Poppin;
 	.productsMorille2columns { grid-template-columns: repeat(2, 1fr); }
 	 .productsMorille li{
 	width:340px!important;
-	min-width: 340px;
-	max-width: 340px;
 	max-height:367px;
 	min-height:367px;
 	text-align:center;
@@ -81,8 +84,9 @@ font-family:Poppin;
 {
 	max-width:100%;
 	margin-right:auto;
-	margin-left:auto;	
+	margin-left:auto;
 }
+
 #content-wrapper .row .col
 {
 	padding:0!important;
@@ -128,7 +132,7 @@ h3
 .mainH img
 {
 	width:100%;
-	max-height:720px;
+max-height:725px;
 	object-fit:cover;
 	
 }
@@ -193,16 +197,16 @@ ul#horizontal-part {
 	max-width:200px;
 	max-height:155px!important;
 	object-fit:contain;
-	margin:0 10px 0 10px;
+	margin:0 30px 0 30px;
 }
 
 .wp-post-image
 {
-	height:600px !important;
+	height:500px !important;
 	object-fit:cover;
 }
 
-a.button
+a.button,.button
 {
 	background-color: #00A0DF !important;
 	color: white!important;
@@ -212,16 +216,13 @@ a.button:hover
 	background-color:#0087bd !important;
 	text-decoration:none;
 }
-[title=Checkout]
-{
-	display:none;
-}
+
 a.nav-link
 {
 	display:none;
 }
 
-
+ a.added_to_cart{display:none;}
 .selection
 {
 	width:200px;
@@ -262,7 +263,28 @@ img.attachment-woocommerce_thumbnail
     background: #ffa845; /* pick your color */
 }
 
-.button,.woocommerce-loop-product__title
+.productsMorille .button,.productsForfaits .button,.woocommerce-loop-product__title
 {
 	margin-top:15px!important;
+}
+.tablepartenaire h2
+{
+padding-top:15px;	
+}
+#popUp
+{ position: fixed;
+    top: 110px;
+	width:200px;
+	background-color:#92e381;
+	right:0px;
+
+z-index:1;}
+
+.cart-customlocation
+{text-align:center;
+	width:150px;
+	padding:10px;
+	margin-right:30px;
+	border-radius:25px;
+	background-color:yellow;
 }
