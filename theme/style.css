@@ -16,10 +16,11 @@ how to get the build process up & running.
 If you need to make a quick fix, feel free to add CSS
 below this comment - it will override the bundled styles.
 */
+
 @font-face
 {
 font-family:Poppin;
-	src:url(../dist/fonts/Poppins/Poppins-Regular.ttf);
+	src:url(../dist/fonts/Poppins/Poppins-light.ttf);
 }
 
 @media (min-width: 300px) {
@@ -41,6 +42,10 @@ font-family:Poppin;
 	  margin: 20px auto 10px auto;
 	  padding:20px;
 	}
+	.woocommerce ul.products[class*="columns-"] li.product:nth-child(2n), .woocommerce-page ul.products[class*="columns-"] li.product:nth-child(2n) {
+    float: none;
+    clear: none !important;
+}
 }
 
 @media (min-width: 600px) {
@@ -80,11 +85,18 @@ font-family:Poppin;
 	width:100px;
 	padding-top:5px;
 }
-#content-wrapper
+.page-id-42 #content-wrapper
 {
 	max-width:100%;
 	margin-right:auto;
 	margin-left:auto;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.navbar-toggler {
+    background: #ffa845; /* pick your color */
 }
 
 #content-wrapper .row .col
@@ -99,22 +111,12 @@ font-family:Poppin;
 
 ul
 {
-list-style-type: none;
+	list-style-type: none;
 }
 
 h1,h2
 {
 	font-family:Poppin;
-}
-a.woocommerce-LoopProduct-link
-{
-	color:black;
-}
-a.woocommerce-LoopProduct-link:hover
-{
-	color:#00A0DF!important;
-	text-decoration:none;
-	
 }
 h1,h3
 {
@@ -141,7 +143,7 @@ max-height:725px;
 {
 	width:100%;
 	height:300px;
- object-fit:cover;
+ 	object-fit:cover;
 	
 }
 
@@ -159,45 +161,57 @@ max-height:725px;
   transform: translate(-50%, -50%);
 }
 
+#popUp,#popUp2
+{ z-index:1;
+	color:white;
+	position: fixed;
+    top: 110px;
+	width:300px;
+	height:50px;
+	padding-top:10px;
+	background-color:#92e381;
+	right:0px;
+	z-index:1;
+	text-align:center;
+}
+
+a.cart-customlocation
+{
+	color:white;
+	font-family:Poppin;
+}
+.fa-cart-arrow-down
+{
+	font-size:20px;
+	color:white;
+	margin:0 10px 0 10px;
+}
+
+.woocommerce
+{
+	margin-top:90px;
+}
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+    
+    margin: 0 8% 2.992em 0 !important;
+       
+}
+
+a.woocommerce-LoopProduct-link
+{
+	color:black;
+}
+
+a.woocommerce-LoopProduct-link:hover
+{
+	color:#00A0DF!important;
+	text-decoration:none;
+	
+}
+
 .woocommerce-loop-product__title
 {
 	font-size:23px;
-}
-
-.tablepartenaire 
-{
-
-	
-padding:0;
-margin-right: auto;
-margin-left: auto;
-	
-	background-color:#F7921E;
-	
-	text-align:center;
-}
-.tablepartenaire h2 
-{
-	font-size:30px;
-	color:white;
-
-}
-
-ul#horizontal-part {
-	width: 100%;
-	list-style: none;
-	margin:0;
-	}
-	ul#horizontal-part li {
-		display: inline;
-		
-	}
-.tablepartenaire img
-{
-	max-width:200px;
-	max-height:155px!important;
-	object-fit:contain;
-	margin:0 30px 0 30px;
 }
 
 .wp-post-image
@@ -205,13 +219,44 @@ ul#horizontal-part {
 	height:500px !important;
 	object-fit:cover;
 }
+.productsMorille .button,.productsForfaits .button,.woocommerce-loop-product__title
+{
+	margin-top:15px!important;
+}
 
-a.button,.button
+.productsMorille a.added_to_cart
+{
+	display:none;
+}
+a.button,a.added_to_cart
 {
 	background-color: #00A0DF !important;
 	color: white!important;
+	margin-top: 15px !important;
+	width:200px;
+	text-align:center;
+	padding: .618em 1em;
+    
+	
+	
 }
-a.button:hover
+.added_to_cart,.product_type_simple .add_to_cart_button,.single_add_to_cart_button
+{	font-size: 100%;
+	background-color: #00A0DF!important;
+	color: #fff;
+	padding: .618em 1em!important;
+	height:45px;
+	border-radius:3px;
+	display:none;
+	margin:auto;
+	width:200px;
+	cursor: pointer;
+	font-weight:700;
+	
+	
+}
+
+a.button:hover,.added_to_cart:hover,.single_add_to_cart_button:hover
 {
 	background-color:#0087bd !important;
 	text-decoration:none;
@@ -221,26 +266,58 @@ a.nav-link
 {
 	display:none;
 }
-
- a.added_to_cart{display:none;}
 .selection
 {
 	width:200px;
 	display:block;
 }
-#order-comment
-{
-	width:200px;
-}
+
 img.attachment-woocommerce_thumbnail
 {
-	max-width:200px;
+	max-width:150px;
+}
+.woocommerce ul.products[class*="columns-"] li.product:nth-child(2n), .woocommerce-page ul.products[class*="columns-"] li.product:nth-child(2n) {
+    float: left;
+    clear: none !important;
+}
+.tablepartenaire 
+{	
+	padding:0;
+	margin-right: auto;
+	margin-left: auto;
+	background-color:#F7921E;
+	text-align:center;
 }
 
-.woocommerce
+.tablepartenaire h2 
 {
-	margin-top:90px;
+	font-size:30px;
+	color:white;
+
 }
+
+
+.tablepartenaire h2
+{
+	padding-top:15px;	
+}
+
+.tablepartenaire img
+{
+	max-width:200px;
+	max-height:155px!important;
+	object-fit:contain;
+	margin:0 30px 0 30px;
+}
+ul#horizontal-part {
+	width: 100%;
+	list-style: none;
+	margin:0;
+	}
+	ul#horizontal-part li {
+		display: inline;
+		
+	}
 
 .cartcontents,.wpmenucart-icon-shopping-cart-0
 {
@@ -248,43 +325,26 @@ img.attachment-woocommerce_thumbnail
 }
 
 #order_comments
-{
-	width: 300px; 
+{	max-width:700px!important;
+	width:500px;
+	 min-width:200px!important;
 	height: 75px;
-}
-.input-text,.selection
-{
-	margin-left:10px!important;
-}
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
-.navbar-toggler {
-    background: #ffa845; /* pick your color */
+	   
 }
 
-.productsMorille .button,.productsForfaits .button,.woocommerce-loop-product__title
+#order_comments:focus,.select2-selection:focus
+{    -webkit-box-shadow: 0 0 0 0.2rem rgba(33, 150, 243, 0.25);
+    box-shadow: 0 0 0 0.2rem rgba(33, 150, 243, 0.25);
+}
+label.control-label
 {
-	margin-top:15px!important;
+	margin-right:10px!important;
 }
-.tablepartenaire h2
+
+.fas
 {
-padding-top:15px;	
+	margin:5px;
 }
-#popUp
-{ position: fixed;
-    top: 110px;
-	width:200px;
-	background-color:#92e381;
-	right:0px;
 
-z-index:1;}
-
-.cart-customlocation
-{text-align:center;
-	width:150px;
-	padding:10px;
-	margin-right:30px;
-	border-radius:25px;
-	background-color:yellow;
-}
+.input-text.qty.text
+{margin-top:5px;}

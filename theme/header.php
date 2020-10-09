@@ -21,6 +21,7 @@
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		<?php wp_head(); ?>
 		
+		
 	</head>
 	<body <?php body_class(); ?>>
 		<?php app_shim_wp_body_open(); ?>
@@ -43,11 +44,12 @@
 						'walker'            => new WP_Bootstrap_Navwalker(),
 					) );
 					?>
-				<a class="cart-customlocation" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php echo sprintf ( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?> </a>
-			
+				
+		<i class="fas fa-cart-arrow-down"><a class="cart-customlocation" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'Voir votre panier' ); ?>"><?php echo sprintf ( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?> </a></i>	
 			</div>
 
 		</nav>
 		
 
-		<div id="popUp"style="display: none; "> Votre article a été ajouté </div>
+		<div id="popUp" style="display: none; "><i class="fas fa-check"></i>L'item a été ajouté </div>
+		

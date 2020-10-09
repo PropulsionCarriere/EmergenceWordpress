@@ -1,37 +1,83 @@
-// $(document).ready(function(){
-//     $(".add_to_cart_button").click(function(){
-      
-//       $( "#popUp" ).fadeIn(); 
-//    setTimeout(function() {
-//       $( "#popUp" ).hide();
-//     }, 20000);
-//     $('#popUp').fadeOut();
-//     });
 
-//    //  $(".productsForfaits .add_to_cart_button").click(function(){
-//    //     $( this ).replaceWith( $( this ).text("Voir le panier") );
-//    //  $(".productsForfaits .add_to_cart_button").attr("href","http://localhost:8888/wordpress/cart-page/");
+$( window ).unload(function() {
+  return "Handler for .unload() called.";
+});
 
-//    });
+  
 
+  var icon2 = document.createElement("i");
+  var icon = document.createElement("i");  
+
+document.querySelectorAll('.productsMorille .add_to_cart_button, .single_add_to_cart_button').forEach(btn=>{
+  btn.addEventListener('click',event =>{
+
+    $( "#popUp" ).fadeIn(); 
+    setTimeout(function() {
+      2000;
+        $('#popUp').fadeOut();
+      }, 4000); 
     
+        icon2.remove();
+        btn.style.opacity = '0.5';
+        
+        icon.className = "fas fa-sync-alt fa-spin";
+        btn.appendChild(icon);
 
-//   });
+      setTimeout(function(){
+        btn.style.opacity = '1';
+        icon.remove();
+      },2000);
 
-// document.getElementsByClassName("productsForfaits add_to_cart_button").addEventListener("click", function(){
-//    document.getElementsByClassName("productsForfaits add_to_cart_button").innerHTML = "Voir le panier";
-//  });
-
-
-// document.querySelectorAll('.productsForfaits .add_to_cart_button').forEach(item => {
-//    item.addEventListener('click', event => {
-//    document.querySelector('.productsForfaits .add_to_cart_button').innerHTML="Voir le panier";
-//      console.log(document.querySelector('.productsForfaits .add_to_cart_button'));
-//    });
-//  });
-const buttons = document.querySelectorAll(".productsForfaits .add_to_cart_button")
-for (const button of buttons) {
-  button.addEventListener('click', function(event) {
-   console.log(document.querySelector('.productsForfaits .add_to_cart_button'));
+      setTimeout(function(){
+        icon2.className = "fas fa-check";
+    
+        btn.appendChild(icon2);
+      },2000);
+    
+    
   })
-}
+})
+    document.querySelectorAll('.productsForfaits .add_to_cart_button,type-product').forEach(item => {
+      item.addEventListener('click', event => {
+        $( "#popUp" ).fadeIn(); 
+        setTimeout(function() {
+          2000;
+            $('#popUp').fadeOut();
+          }, 4000); 
+        
+        item.style.opacity = '0.5';
+        var icon = document.createElement("i");
+        icon.className = "fas fa-sync-alt fa-spin";
+        
+        item.appendChild(icon);
+     
+        setTimeout(function(){
+        var x, i;
+  x = document.querySelectorAll(".added_to_cart");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display= "block";
+  }
+        }, 2000);
+        setTimeout(function(){ 
+        
+          item.style.display='none';
+          
+        }, 2000);
+        
+
+        setTimeout(function(){
+        var x, i;
+  x = document.querySelectorAll(".added_to_cart");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display= "block";
+  }
+        }, 2000);
+        setTimeout(function(){ 
+        
+          item.style.display='none';
+          
+        }, 2000);
+         
+      });
+  });
+  
