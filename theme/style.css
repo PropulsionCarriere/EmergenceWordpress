@@ -56,7 +56,7 @@ font-family:Poppin;
 
 @media (min-width: 900px) {
  
-	.mainH h1{border:solid white;padding:100px;}
+	.mainH h1{border:solid white;padding:140px;}
 	.secondH h1{border:solid white;padding:50px;}
 	.productsMorille { grid-template-columns: repeat(3, 1fr); }
 	.productsMorille2columns { grid-template-columns: repeat(2, 1fr); }
