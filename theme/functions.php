@@ -86,7 +86,6 @@ add_action(
 		require_once APP_APP_SETUP_DIR . 'menus.php';
 	}
 );
-
 add_action(
 	'init',
 	function() {
@@ -164,9 +163,8 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
 	global $woocommerce;
 
 	ob_start();
-
-	?>
-	<a class="cart-customlocation" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php _e('View your shopping cart', 'woothemes'); ?>"><?php echo sprintf(_n('%d item', '%d items', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?> </a>
+?>
+<a class="cart-customlocation" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php _e('View your shopping cart', 'woothemes'); ?>"><?php echo sprintf(_n('%d item', '%d items', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?> </a>
 	<?php
 	$fragments['a.cart-customlocation'] = ob_get_clean();
 	return $fragments;
@@ -174,7 +172,7 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
 
 
 function wc_empty_cart_redirect_url() {
-	return 'http://localhost:8888/wordpress/';
+	return 'https://boutique.propulsioncarriere.ca/';
 }
 add_filter( 'woocommerce_return_to_shop_redirect', 'wc_empty_cart_redirect_url' );
 add_filter( 'wc_add_to_cart_message_html', '__return_false' );
@@ -275,6 +273,7 @@ function prevent_duplicate_products_redirect( $url = false ) {
 /**
  * JS for AJAX Add to Cart handling
  */
+ob_start();
 function ace_product_page_ajax_add_to_cart_js() {
     ?><script type="text/javascript" charset="UTF-8">
 		jQuery(function($) {
@@ -332,8 +331,9 @@ function ace_product_page_ajax_add_to_cart_js() {
 		});
 	</script><?php
 }
-add_action( 'wp_footer', 'ace_product_page_ajax_add_to_cart_js' ); ?>
 
+$form = ob_get_clean();
+add_action( 'wp_footer', 'ace_product_page_ajax_add_to_cart_js' ); ?>
 <?php // For implementation instructions see: https://aceplugins.com/how-to-add-a-code-snippet/
 
 /**
@@ -350,4 +350,3 @@ add_action( 'wc_ajax_nopriv_ace_add_to_cart', 'ace_ajax_add_to_cart_handler' );
 remove_action( 'wp_loaded', array( 'WC_Form_Handler', 'add_to_cart_action' ), 20 );
 
 ?>
-

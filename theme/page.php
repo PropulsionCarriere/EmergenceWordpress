@@ -18,19 +18,19 @@ if(is_front_page())
 	<h1>
 		<?php 
 		$term = get_term_by('slug', 'nos-forfaits', 'product_cat'); 
-		echo $term->name; 
+		echo "".$term->name; 
 		?>
 	</h1>
 	
 	<?php 
-		$product_categories=get_terms('slug','product_cat',$args);
+		$product_categories=get_terms('slug','product_cat');
 		$thumbnail_id=get_term_meta($term->term_id,'thumbnail_id',true);
 		$thumbnail_result=wp_get_attachment_image($thumbnail_id,'mainheader',false,["class" => "img-fluid"]);
 		echo $thumbnail_result;
 	?>
 	</div>
 	<h3>
-		Tout nos forfaits inclus dans le forfait : Panier Cadeaux d’une valeur de  100.00$/pers.
+		<?php echo $term->description;?>
 	</h3>
 
 <div>
