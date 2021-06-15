@@ -6,8 +6,7 @@
  *
  * @package WPEmergeTheme
  *<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-items-container" aria-controls="navbar-items-container" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
+				
  */
 
 ?>
