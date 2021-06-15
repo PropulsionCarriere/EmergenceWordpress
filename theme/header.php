@@ -51,5 +51,5 @@
 		</nav>
 		
 
-		<div id="popUp" style="display: none; "><i class="fas fa-check"></i>L'item a été ajouté </div>
+		<div id="popUp" style="display: none; "><i class="fas fa-check"></i>L'item a été ajouté! </div>
 		
